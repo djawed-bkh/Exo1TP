@@ -5,6 +5,10 @@ import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -18,19 +22,20 @@ public class MainActivity extends AppCompatActivity {
     private RadioButton Poires;
     private TextView pommesResult;
     private TextView poiresResult;
-    private int pommetotal=0;
-    private int poiretotal=0;
+    private int pommetotal = 0;
+    private int poiretotal = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
 
-        compter= (Button) findViewById(R.id.CompterBID);
-        Poires=(RadioButton) findViewById(R.id.PoiresRID);
-        Pommes=(RadioButton) findViewById(R.id.PommesRID);
-        pommesResult=(TextView) findViewById(R.id.PommesResult);
-        poiresResult=(TextView) findViewById(R.id.PoiresResult);
+        compter = (Button) findViewById(R.id.CompterBID);
+        Poires = (RadioButton) findViewById(R.id.PoiresRID);
+        Pommes = (RadioButton) findViewById(R.id.PommesRID);
+        pommesResult = (TextView) findViewById(R.id.PommesResult);
+        poiresResult = (TextView) findViewById(R.id.PoiresResult);
 
 
         compter.setOnClickListener(new View.OnClickListener() {
@@ -38,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                if ( !(Pommes.isChecked()) && !(Poires.isChecked())){
+                if (!(Pommes.isChecked()) && !(Poires.isChecked())) {
 
 
                     new AlertDialog.Builder(MainActivity.this)
@@ -51,15 +56,14 @@ public class MainActivity extends AppCompatActivity {
                                 }
                             }).show();
 
-                }
-                else{
+                } else {
 
-                            if (Pommes.isChecked()){
-                                pommetotal++;
-                                pommesResult.setText(""+pommetotal);
-                            }else if (Poires.isChecked()){
-                                poiretotal++;
-                                poiresResult.setText(""+poiretotal);
+                    if (Pommes.isChecked()) {
+                        pommetotal++;
+                        pommesResult.setText("Pommes=" + pommetotal);
+                    } else if (Poires.isChecked()) {
+                        poiretotal++;
+                        poiresResult.setText("Poires=" + poiretotal);
 
                     }
 
@@ -70,9 +74,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
-
     }
 
-
+    
 }
+

@@ -4,8 +4,6 @@
     <string name="PommesRadio">Pommes</string>
     <string name="PoiresRadio">Poires</string>
     <string name="CompterButton">Compter</string>
-    <string name="Pommesresult">0</string>
-    <string name="PoiresResult">0</string>
-    <string name="Pommes">Pommes=</string>
-    <string name="Poires">Poires=</string>
+    <string name="Pommesresult">Pommes=0</string>
+    <string name="PoiresResult">Poires=0</string>
 </resources>

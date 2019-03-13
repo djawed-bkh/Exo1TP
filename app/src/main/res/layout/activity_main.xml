@@ -11,90 +11,90 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:layout_marginBottom="62dp"
         android:text="@string/CompterButton"
-        app:layout_constraintEnd_toEndOf="@+id/PommesResult"
-        app:layout_constraintStart_toEndOf="@+id/PommesResult"
-        app:layout_constraintTop_toBottomOf="@+id/PoiresRID" />
+        app:layout_constraintBottom_toTopOf="@+id/PommesResult"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="146dp"
+        android:layout_height="0dp"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="224dp"
         android:text="@string/TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        app:layout_constraintBottom_toTopOf="@+id/CompterBID"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <RadioButton
-        android:id="@+id/PommesRID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="57dp"
-        android:text="@string/PommesRadio"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <RadioButton
-        android:id="@+id/PoiresRID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:text="@string/PoiresRadio"
-        app:layout_constraintStart_toStartOf="@+id/PommesRID"
-        app:layout_constraintTop_toBottomOf="@+id/PommesRID" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="71dp"
-        android:layout_height="22dp"
-        android:layout_marginStart="58dp"
-        android:layout_marginLeft="58dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:text="@string/Pommes"
-        app:layout_constraintBaseline_toBaselineOf="@+id/PommesResult"
-        app:layout_constraintEnd_toStartOf="@+id/PommesResult"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/PommesResult"
-        android:layout_width="45dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="228dp"
-        android:layout_marginRight="228dp"
-        android:text="@string/PoiresResult"
+        android:layout_width="220dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="41dp"
+        android:text="@string/Pommesresult"
+        app:layout_constraintBottom_toTopOf="@+id/PoiresResult"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.267"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CompterBID" />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="0dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="58dp"
-        android:layout_marginLeft="58dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:text="@string/Poires"
-        app:layout_constraintBaseline_toBaselineOf="@+id/PoiresResult"
-        app:layout_constraintEnd_toStartOf="@+id/PoiresResult"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
         android:id="@+id/PoiresResult"
+        android:layout_width="232dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="67dp"
+        android:text="@string/PoiresResult"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.262"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PommesResult" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="287dp"
+        android:layout_height="176dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="19dp"
+        app:layout_constraintBottom_toTopOf="@+id/CompterBID"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/PoiresRID"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:text="@string/PoiresRadio"
+            tools:layout_editor_absoluteX="118dp"
+            tools:layout_editor_absoluteY="81dp" />
+
+        <RadioButton
+            android:id="@+id/PommesRID"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:text="@string/PommesRadio"
+            tools:layout_editor_absoluteX="115dp"
+            tools:layout_editor_absoluteY="49dp" />
+    </RadioGroup>
+
+    <android.support.constraint.Group
+        android:id="@+id/group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="228dp"
-        android:layout_marginRight="228dp"
-        android:text="@string/PoiresResult"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/PommesResult" />
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
